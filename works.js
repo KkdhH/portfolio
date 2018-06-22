@@ -25,11 +25,11 @@ $('.menu_left img, .menu_left p').click(function() {
 	$('.menu .menu_top h1').animate({marginLeft:'8%'}, 600);
 	$('.menu .menu_bottom').animate({bottom:-10}, 600);
 	$('.menu .menu_right').animate({right:-10}, 600);
-	$('.wrap').stop().animate({'opacity':'.1'}, 700);
+	$('.wrap').stop().animate({'opacity':'.8'}, 700);
 });
 
 $('.menu > .slide img').click(function() {
-	$('.menu > .slide').stop().animate({left:'-65%'}, 400);
+	$('.menu > .slide').stop().animate({left:'-30%'}, 400);
 	$('.menu .menu_top').animate({top:-80}, 400);
 	$('.menu .menu_top h1').animate({marginLeft:45}, 400);
 	$('.menu .menu_bottom').animate({bottom:-80}, 400);
@@ -39,16 +39,19 @@ $('.menu > .slide img').click(function() {
 
 /*************************************************************/
 $('.list .sony').mouseenter(function() {
-	$('body').css({
-		'background':'url(images/sony_works.png)',
+	$('.wrap').css({
+		// 'background':'url(images/sony_works.png)',
+		'background':'url(images/sony_works2.png)',
 		'background-size':'cover',
 		'background-position':'center'
 	});
 });
 $('.list .sony').mouseleave(function() {
-	$('body').css({
+	$('.wrap').css({
 		'background':'url(images/star_works.png) #5d2855',
 		'background-size':'cover',
 		'background-position':'center'
 	});
 });
+
+/*****************************************************/
