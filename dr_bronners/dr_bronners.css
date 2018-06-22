@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+.section__more-inner--bg1 {
+	background-color: #ccd2ed;
+}
+
+.section__more-inner--bg2 {
+	background-color: #f2cccc;
+}
+
+.section__more-inner--bg3 {
+	background-color: #fffbb8;
+}
+
+.section__more-inner--bg4 {
+	background-color: #cbe5ef;
+}
+
+.section__more-inner--bg5 {
+	background-color: #ffe9c7;
+}
+
+p.section__facts-detail { margin-top:0.5em; margin-bottom:0.5em; }
+.menu__toggle .icon { width:1.7rem; height:1.7rem; }

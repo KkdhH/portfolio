@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dr.bronner's company</title>
+		<meta name="description" content="An implementation of Gil Huybrecht's Outdoors design" />
+		<meta name="keywords" content="template, web design, html, javascript, layout, css, slide out" />
+		<meta name="author" content="Codrops" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="dr_bronners.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 13">
+				<title>menu</title>
+				<path d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z"/>
+			</symbol>
+			<symbol id="icon-dot" viewBox="0 0 24 24">
+				<title>dot</title>
+				<path d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z"/>
+			</symbol>
+			<symbol id="icon-arrowlong" viewBox="0 0 32 11">
+				<title>arrow-long</title>
+				<path d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z"/>
+			</symbol>
+			<symbol id="icon-close" viewBox="0 0 24 24">
+				<title>close</title>
+				<path d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z"/>
+			</symbol>
+			<symbol id="icon-navup" viewBox="0 0 50 50">
+				<title>navup</title>
+				<path d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z" />
+			</symbol>
+			<symbol id="icon-navdown" viewBox="0 0 50 50">
+				<title>navdown</title>
+				<path d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z" />
+			</symbol>
+			<symbol id="icon-grid" viewBox="0 0 24 24">
+				<title>grid</title>
+				<path d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z"/>
+			</symbol>
+		</svg>
+		<main>
+			<div class="sections">
+				<header class="sections__header">
+					<h1 class="title"><img src="images/company_logo.png" alt="로고"></h1>
+				</header>
+				
+				<!-- menu -->
+				<nav class="menu">
+					<ul class="menu__inner">
+						<li class="menu__item"><a class="menu__item-link" href="http://drbronnerskorea.com/shopinfo/company.html" target="_blank">Our Story</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="http://drbronnerskorea.com/index.html" target="_blank">Product</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="http://drbronnerskorea.com/board/index.html" target="_blank">Customer</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#">Portfolio</a></li>
+					</ul>
+					<div class="menu__toggle">
+						<span class="menu__toggle-inner menu__toggle-inner--open">
+							<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+						</span>
+						<span class="menu__toggle-inner menu__toggle-inner--close">
+							<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+						</span>
+					</div>
+				</nav>
+				<!-- facts expander with toggles; content for each is in its section -->
+				<div class="facts">
+					<div class="facts__toggle">
+						<span class="facts__toggle-inner facts__toggle-inner--more">
+							<svg class="icon icon--dot"><use xlink:href="#icon-dot"></use></svg>
+							<span class="facts__toggle-text">See more facts</span>
+						</span>
+						<span class="facts__toggle-inner facts__toggle-inner--less">
+							<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+							<span class="facts__toggle-text">See less facts</span>
+						</span>
+					</div>
+					<button class="button-contentclose">
+						<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+					</button>
+				</div>
+				<!-- index -->
+				<div class="sections__index">
+					<span class="sections__index-current">
+						<span class="sections__index-inner">01</span>
+					</span>
+					<span class="sections__index-total">05</span>
+				</div>
+				<!-- navigation down -->
+				<nav class="sections__nav">
+					<button class="sections__nav-item sections__nav-item--prev">
+						<svg class="icon icon--navup"><use xlink:href="#icon-navup"></use></svg>
+					</button>
+					<button class="sections__nav-item sections__nav-item--next">
+						<svg class="icon icon--navdown"><use xlink:href="#icon-navdown"></use></svg>
+					</button>
+				</nav>
+				<!-- sections -->
+				<section class="section section--current">
+					<div class="section__content">
+						<h2 class="section__title">brand</h2>
+						<p class="section__description"><span class="section__description-inner">60년 전통, 5대째 가업을 이어가고 있는 미국 유기농 바디케어 시장 점유율 1위 브랜드로 1948년 캘리포니아주에 설립되었습니다. 자연에서 얻어진 최상의 원료를 모든 소비자와 함께 나누고 누린다는 철학을 바탕으로 환경보호에 앞장서는 친환경 기업입니다. 거품을 뺀 가격의 제품을 공급함으로써 합리적 소비 실천을 권장하며 비윤리적이고 불필요하며 신뢰할 수 없는 동물실험을 하지 않습니다.</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(images/brand_img.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg1">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="http://drbronnerskorea.com/index.html" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Dr.bornner’s 공식 홈페이지</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">유기농 및 천연 인증 제품</h3>
+							<p class="section__facts-detail">미국, 독일, 벨기에에서 유기농 및 천연 인증을 받았으며, 유기농법으로 재배된 식물성 원료로 제조된 친환경 제품입니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">EWG 선정 안전 화장품 브랜드</h3>
+							<p class="section__facts-detail">합성계면활성제, 인공 향, 색소, 파라벤, 동물•광물성분, GMO 유전자 조작 원료를 사용하지 않으며 모든 제품의 전성분을 공개합니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">윤리적 소비운동</h3>
+							<p class="section__facts-detail">공정무역에 동참, 기업의 사회적인 책임 의식을 바탕으로 이윤을 제 3국가 및 사회 환원에 힘쓰며 윤리적 소비운동에 동참하고 있습니다.</p>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery1">
+							<div class="section__facts-img">
+								<img src="images/impress1.png" alt="Some image"/>
+								<svg class="icon icon--grid"><use xlink:href="#icon-grid"></use></svg>
+							</div>
+							<h3 class="section__facts-title">More impressions</h3>
+							<span class="section__facts-detail">인증 프로그램</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery1">
+						<h3 class="section__gallery-item section__gallery-item--title">More impressions</h3>
+						<a class="section__gallery-item" href="#"><img src="images/impress1.png" alt="brand_img1"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/impress2.png" alt="brand_img2"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/impress3.png" alt="brand_img3"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/impress4.png" alt="brand_img4"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/impress5.png" alt="brand_img5"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/impress6.png" alt="brand_img6"/></a>
+					</div>
+				</section><!--/ section -->
+
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">history</h2>
+						<p class="section__description"><span class="section__description-inner">1858년, 브로너 가족의 1대이자 창시자인 Emmanuel Heilbronner 은 독일 최초 비누 메이커 자격증을 취득했고 비누공장을 설립하여 비누와 초를 제조하였습니다. Berthold와 그의 아내 Franciska 사이에서 탄생한 닥터 브로너스 매직솝의 창시자인 Emanuel(Emil) Heilbronner은 가업 발전을 위해 미국으로 이민을 가게 됩니다. 미국 이민시 가지고 있던 비전과 제품개발에 대한 열정으로 Dr.Bronner’s Magic Soap을 캘리포니아에 처음 설립했습니다.</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(images/history_img.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg2">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="http://drbronnerskorea.com/index.html" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Dr.bornner’s 공식 홈페이지</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">1858년</h3>
+							<span class="section__facts-detail">브로너 가족의 1대이자 창시자인 Heilbronner에게 독일 최초의 비누 메이커 자격증이 주어졌습니다.</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">1929~1930년</h3>
+							<p class="section__facts-detail">Heilbronner 아들 Emil은 비누 제조에 대한 아이디어를 위해 신대륙인 미국으로 이민을 가게 됩니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">1940~50년대</h3>
+							<p class="section__facts-detail">1948년 닥터 브로너스 매직솝을 캘리포이니아에 설립하고 페퍼민트 솝을 런칭했습니다. “All-One!” 운동을 시작하였는데, 강의를 들으러 오는 사람들에게 비누 병에 그의 철학을 작고 빽빽하게 적어 나눠주었고, 브로너스 라벨의 시초가 되었습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">1960~70년대</h3>
+							<p class="section__facts-detail">히피 문화 주도, 반전·비폭력·사랑을 주장했던 미국 젊은이들은 라벨에 담긴 철학에 공감했고 닥터 브로너스는 문화적인 아이콘으로서 미국 전역으로 퍼져나갔습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">1997년 3월 7일</h3>
+							<p class="section__facts-detail">닥터 브로너는 파킨슨 병으로 세상과 작별하였습니다. 닥터 브로너와 그의 아들이 작고 후, 브로너스사는 147만평 토지를 샌디에고 Boys&Girls 클럽에 기부하였습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">2000년대</h3>
+							<p class="section__facts-detail">미국 농부무(USDA) 산하 기구 OTCO를 받아 소비자에게 신뢰를 받으며 유기농 화장품 업계의 아이콘이 되었습니다. 스위스 인증 기관인 IMO와 협력하여 공정무역에 동참하게 되었고, 소비자의 ‘알 권리’를 중요시하여 유전자변형 생물체(GMO)가 함유된 식품의 라벨 표시 의무화를 지지하였습니다.</p>
+						</li>
+					</ul>
+				</section><!--/ section -->
+
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">all-one</h2>
+						<p class="section__description"><span class="section__description-inner">닥터 브로너스 제품 전면에 인쇄되어있는 30,000개 이상의 단어들은 우리 브랜드만의 철학을 나타내고 있는데, 이는 존중(respect)과 공유(share)로 요약 될 수 있습니다.</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(images/allone_img.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg3">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="http://drbronnerskorea.com/index.html" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Dr.bornner’s 공식 홈페이지</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">존중 (respect)</h3>
+							<p class="section__facts-detail">우리 모두 인종과 종교를 떠나 서로 사랑하고 존중하며, 우리 모두가 몸담고 있는 환경 역시 존중해야 한다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">공유 (share)</h3>
+							<p class="section__facts-detail">건설적인 자본주의란 우리가 벌어들인 이익을 함께 일한 노동자들과 그것을 가능하게끔 한 자연과 함께 공유하는 것이다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">"all-one!"</h3>
+							<p class="section__facts-detail">우리 모두 인종과 종교를 떠나 서로 사랑하고 존중하며, 우리 모두가 몸담고 있는 환경 역시 존중해야 한다는 내용의 운동입니다.</p>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery3">
+							<div class="section__facts-img">
+								<img src="images/allone1.png" alt="Some image"/>
+								<svg class="icon icon--grid"><use xlink:href="#icon-grid"></use></svg>
+							</div>
+							<h3 class="section__facts-title">More impressions</h3>
+							<span class="section__facts-detail">닥터 브로너스 gallery</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery3">
+						<h3 class="section__gallery-item section__gallery-item--title">More impressions</h3>
+						<a class="section__gallery-item" href="#"><img src="images/allone1.png" alt="allone_img1"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/allone2.png" alt="allone_img2"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/allone5.png" alt="allone_img3"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/allone6.png" alt="allone_img4"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/allone3.png" alt="allone_img5"/></a>
+						<a class="section__gallery-item" href="#"><img src="images/allone4.png" alt="allone_img6"/></a>
+					</div>
+				</section><!--/ section -->
+
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">mission</h2>
+						<p class="section__description"><span class="section__description-inner">윤리적이고도 친환경적인 방법으로 만드는 최상의 제품 / 틀을 깬 가족 경영 / 만드는 사람도 행복하고 쓰는 사람도 행복한 제품 / 모두의 행복을 위한 이윤 공유 / 가치 지향 경영 은 닥터 브로너스의 5가지 사명입니다.</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(images/mission_img.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="http://drbronnerskorea.com/index.html" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Dr.bornner’s 공식 홈페이지</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">품질</h3>
+							<p class="section__facts-detail">닥터 브로너스 제품은 자연에서 분해되며, 어떤 합성 화학성분이나 합성보존제도 함유하고 있지 않습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">가족</h3>
+							<p class="section__facts-detail">직원의 역량을 펼칠 수 있는 업무환경을 제공과 개인적인 성장을 격려하여 그들의 공헌이 회사와 세계에 미칠 긍정적인 영향을 상기시켜주려 합니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">사회적 책임</h3>
+							<p class="section__facts-detail">전 세계 약 10,000명의 노동자들은 우리가 구축한 공정무역 공급망으로부터 직접적인 혜택을 얻고 있으며, 그들이 지속적으로 자생할 수 있게끔 하고자 합니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">회사경영</h3>
+							<p class="section__facts-detail">지난 5년동안 대부분의 수익을 사회, 환경적인 가치를 도모하는 일에 사용해왔습니다. 이윤이 사회에 환원되는 일에 관심을 기울이고자 노력하고 있습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">사회활동</h3>
+							<p class="section__facts-detail">믿고 실현하고자 하는 가치에 있어서는 그 어떤 재정적인 지원도 아끼지 않습니다. 전 세계로 시선을 넓혀사회적활동에 참여하고 도모하고자 했습니다.</p>
+						</li>
+					</ul>
+				</section><!--/ section -->
+
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">effort</h2>
+						<p class="section__description"><span class="section__description-inner">기준에 따른 유기농 제품 생산, 공정 무역 구호 활동,  ‘Hemp History Week’의 메인 스폰서 활동, 제품들의 라벨 표시 의무화, 기부 등 여러 사회활동에 앞장서고 있습니다.</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(images/effort_img5.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg5">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="http://drbronnerskorea.com/index.html" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Dr.bornner’s 공식 홈페이지</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">정직한 유기농</h3>
+							<p class="section__facts-detail">닥터 브로너스는 소비자들이 유기농 제품을 구분하여 현명한 소비를 할 수 있도록 노력하고 있습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">공정 무역</h3>
+							<p class="section__facts-detail">스위스의 IMO로부터 인증된 원료만을 사용하고 있으며 협회의 멤버로 적극적인 구호 활동을 펼치고 있습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">헴프</h3>
+							<p class="section__facts-detail">미국 전역의 헴프 경작을 활성화 시키고, 헴프의 경제적인 가치에 대한 교육적인 활동을 본격화 하기 위해 ‘Hemp History Week’의 메인 스폰서로 활동하고 있습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">GMO 라벨링</h3>
+							<p class="section__facts-detail">소비자들에게 유전자 변형 식품의 위험성을 알리고 이러한 제품들의 라벨 표시 의무화를 이룩하고자 다양한 노력을 기울이고 있습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">동물 복지</h3>
+							<p class="section__facts-detail">믿고 실현하고자 하는 가치에 있어서는 그 어떤 재정적인 지원도 아끼지 않습니다. 전 세계로 시선을 넓혀사회적활동에 참여하고 도모하고자 했습니다.</p>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">사회공헌</h3>
+							<p class="section__facts-detail">이익의 약 1/3을 여러 단체를 통해 사회에 반환하며, 소비자들이 보다 안전한 제품을 사용할 권리를 누릴 수 있도록 여러가지 사회 활동을 펼치고 있습니다.</p>
+						</li>
+					</ul>
+				</section><!--/ section -->
+			</div><!--/ sections -->
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
