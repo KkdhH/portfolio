@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.wrap { text-align:center; margin:5px auto 70px; position:relative; }
+.wrap p img { outline:1px #454545 solid; margin-bottom:50px; }
+.wrap p:nth-child(2) a { display:block; position:absolute; bottom:210px; z-index:999; width:130px; height:50px; margin:auto; left:0; right:0; text-indent:-9999px }
+.wrap p a { font-size:24px; color:#939393; }
