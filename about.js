@@ -29,7 +29,7 @@ $('.menu_left img, .menu_left p').click(function() {
 });
 
 $('.menu > .slide img').click(function() {
-	$('.menu > .slide').stop().animate({left:'-30%'}, 400);
+	$('.menu > .slide').stop().animate({left:'-50%'}, 400);
 	$('.menu .menu_top').animate({top:-80}, 400);
 	$('.menu .menu_top h1').animate({marginLeft:45}, 400);
 	$('.menu .menu_bottom').animate({bottom:-80}, 400);
@@ -37,14 +37,4 @@ $('.menu > .slide img').click(function() {
 	$('.wrap').stop().animate({'opacity':'1'},400);
 });
 
-/**************************배경별*************************/
-$('.wrap').mousemove(function(e) {
-		
-	var x = e.pageX; //마우스 커서의 x축 위치 값
-	var y = e.pageY; //마우스 커서의 y축 위치 값
-	$('.s11').css({'left':41-(x/10), 'top':50+(y/10)});
-	$('.s12').css({'left':57+(x/20), 'top':154-(y/20)});
-	$('.s13').css({'left':173-(x/30), 'top':45-(y/30)});
-	});
-
-/*********************************************************/
+/**********************************************************/

@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i|Nanum+Gothic:400,700,800');
+
+html, body { height:100%; }
+
+body { font-family: 'Nanum Gothic', sans-serif; width:100%; }
+a { color:#000; font-size:25px; text-transform:uppercase; }
+
+.menu { text-align:center; }
+.menu .menu_top { position:fixed; width:100%; height:120px; top:-80px; left:0; background-color:#fff; z-index:999; }
+.menu .menu_top h1 { width:300px; height:45px; margin-left:45px; margin-top:77px; font-size:25px; text-transform:uppercase; }
+.menu .menu_top a { display:block; font-size:17px; font-weight:800; letter-spacing:1.5px; text-align:left;  line-height:45px; color:#000; }
+
+.menu .menu_left { position:fixed; width:40px; height:100%; top:0; left:0; background-color:#fff; text-transform:uppercase; z-index:99; }
+.menu .menu_left img { width:28px; position:absolute; margin:auto; top:0; bottom:0; right:-24px; cursor:pointer; padding-right:10px; }
+.menu .menu_left p { transform:rotate(-90deg); ffont-size:14px; color:#fff; font-weight:700; position:absolute; top:50%; margin-top:-8.5px; right:-68px; cursor:pointer; }
+
+.menu .slide_st { width:120px; height:100%; position:fixed; top:0; left:-130px; background-color:#fff; z-index:90; }
+
+.menu .slide { width:20%; height:100%; position:fixed; background-color:#fff; top:0; left:-30%; z-index:100; }
+.menu .slide a { text-transform:capitalize; font-size:50px; }
+.menu .slide p { font-weight:700; }
+.menu .slide article { margin-top:100%; }
+.menu .slide p:nth-child(1) { margin-bottom:55px; }
+.menu .slide img { width:23px; position:absolute; margin:auto; top:0; bottom:0; left:8%; cursor:pointer; }
+
+.menu .menu_bottom { position:fixed; width:100%; height:120px; bottom:-80px; left:0; background-color:#fff; z-index:50; }
+.menu .menu_right { position:fixed; width:120px; height:100%; top:0; right:-80px; background-color:#fff; z-index:49; }
+
+/************************************************************/
+.wrap { width:100%; height:100%; background:linear-gradient(to bottom, #392b4b, #5d2855); background-size:cover; background-position:center; }
+
+.content { width:1150px; height:70%; position:absolute; margin:auto; top:0; bottom:0; left:0; right:0; }
+.content header { text-transform:capitalize; font-family: 'Josefin Sans', sans-serif; font-size:20px; margin-bottom:50px; margin-left:50px; color:rgba(231, 220, 226, 1); }
+.content header h1 { font-size:52px; font-weight:600; font-style:italic; margin-top:10px; color:rgba(239, 222, 230, .8); text-shadow: 1px 1px 4px #e53c99, 0 0 7px #a88caa; }
+
+.content aside { position:absolute; top:30%; left:-120px; }
+.content aside p { transform:rotate(-90deg); font-family: 'Josefin Sans', sans-serif; font-size:32px; font-style:italic; color:rgba(239, 222, 237, .9); }
+
+.content h2 { font-size:35px; font-weight:600; font-style:italic; text-transform:capitalize; margin-bottom:30px; font-family: 'Josefin Sans', sans-serif; color:rgba(239, 222, 237, .9); }
+.content table { margin-left:10px; }
+.content table td { line-height:25px; padding:5px 0; }
+.content table td:first-child { font-size:25px; font-weight:700; text-transform:capitalize; font-family: 'Josefin Sans', sans-serif; color:#e0c4dd;  }
+.content table td:last-child { font-size:14px; padding-left:20px; color:#e0c4dd; }
+
+.content .profile { margin-bottom:60px; margin-left:70px; float:left; }
+
+
+
+
+.content .skill { position:absolute; right:50px; }
+.content .skill td { padding:0; }
+
+
+
+.content .experience { clear:both; margin-left:70px; }
+.content .experience tr:last-child td { font-family: 'Nanum Gothic', sans-serif; font-weight:normal; font-size:14px; }
+.content .experience tr:nth-child(4) td { font-family: 'Nanum Gothic', sans-serif; font-weight:normal; font-size:14px; }
+
+.github { position:absolute; right:50px; margin-top:-30px; }
+.github a { font-size:13px; color:#e0c4dd; font-weight:normal; }
+.github a:hover { color:#fff; }

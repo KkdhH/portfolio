@@ -39,11 +39,3 @@ $('.business nav ul img').hover(function() {
 }, function() {
 	$(this).stop().css({'transform':'scale(1)', 'opacity':'1'});
 });
-
-$('.works nav ul').hover(function() {
-	$(this).css({'margin-top':'15px'});
-	$(this).children('li').children('div').children('img').css({'transform':'scale(1.25)', 'opacity':'.9'});
-}, function() {
-	$(this).css({'margin-top':'38px'});
-	$(this).children('li').children('div').children('img').css({'transform':'scale(1)', 'opacity':'1'});
-});

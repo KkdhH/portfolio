@@ -29,7 +29,7 @@ $('.menu_left img, .menu_left p').click(function() {
 });
 
 $('.menu > .slide img').click(function() {
-	$('.menu > .slide').stop().animate({left:'-30%'}, 400);
+	$('.menu > .slide').stop().animate({left:'-50%'}, 400);
 	$('.menu .menu_top').animate({top:-80}, 400);
 	$('.menu .menu_top h1').animate({marginLeft:45}, 400);
 	$('.menu .menu_bottom').animate({bottom:-80}, 400);
@@ -38,21 +38,11 @@ $('.menu > .slide img').click(function() {
 });
 
 /*************************************************************/
-/*
-$('.list .sony').mouseenter(function() {
-	$('body').css({
-		// 'background':'url(images/sony_works.png)',
-		'background':'url(images/sony_works2.png)',
-		'background-size':'cover',
-		'background-position':'center'
+$('.wrap').mousemove(function(e) {
+		
+	var x = e.pageX; //마우스 커서의 x축 위치 값
+	var y = e.pageY; //마우스 커서의 y축 위치 값
+	$('.s11').css({'left':41-(x/15), 'top':50+(y/15)});
+	$('.s12').css({'left':57+(x/20), 'top':154-(y/20)});
+	$('.s13').css({'left':173-(x/30), 'top':45-(y/30)});
 	});
-});
-$('.list .sony').mouseleave(function() {
-	$('body').css({
-		'background':'url(images/star_works.png) #5d2855',
-		'background-size':'cover',
-		'background-position':'center'
-	});
-});
-*/
-/*****************************************************/
