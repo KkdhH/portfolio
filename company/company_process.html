@@ -5,9 +5,13 @@
 	<META http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>portfolio work 2 - Dr.bronner's 페이지</title>
 	<link rel="stylesheet" href="../common/reset.css"/>
+	<link rel="stylesheet" href="../scripts/animsition.min.css">
 	<link rel="stylesheet" href="company_process.css">
+	<script src="../common/prefixfree.min.js"></script>
+	<script src="../common/jquery-3.3.1.min.js"></script>
+	<script src="../common/jquery-ui.min.js"></script>
 </head>
-<body>
+<body class="animsition">
 	<div class="wrap">
 		<header>
 			<h1><img src="images/company_logo.png" alt="더큐브로고"></h1>
@@ -134,13 +138,17 @@
 		</div>
 		
 		<article class="go">
-			<p><a href="company.html">웹페이지 바로가기</a></p>
+			<p><a href="company.html" class="animsition-link"
+  data-animsition-out-class="fade-out-up-sm"
+  data-animsition-out-duration="1000">웹페이지 바로가기</a></p>
 		</article>
 	</div>
 
 	<div class="back">
-		<p><a href="../works.html">목록으로 돌아가기</a></p>
+		<p><a href="../works.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="500">목록으로 돌아가기</a></p>
 	</div>
 
+	<script src="../scripts/animsition.min.js"></script>
+	<script src="company_process.js"></script>
 </body>
 </html>

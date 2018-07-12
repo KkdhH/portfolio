@@ -7,6 +7,7 @@
 	<title>Portfolio - company</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 	<link rel="stylesheet" href="../common/reset.css"/>
+	<link rel="stylesheet" href="../scripts/animsition.min.css">
 	<link rel="stylesheet" href="company.css"/>
 	<link rel="stylesheet" href="company_mQ.css"/>
 
@@ -16,6 +17,7 @@
 
 </head>
 <body>
+	<div class="wrap animsition">
 	<header>
 		<div class="header">
 			<div class="header_wrap">
@@ -30,9 +32,9 @@
 			</div>
 		</div>
 		<ul class="header_bg">
-			<li><!-- <img src="images/header_bg1.png" alt="bg1"> --></li>
-			<li><!-- <img src="images/header_bg2.png" alt="bg2"> --></li>
-			<li><!-- <img src="images/header_bg3.png" alt="bg3"> --></li>
+			<li>img1</li>
+			<li>img2</li>
+			<li>img3</li>
 		</ul>
 		
 		<div class="main">
@@ -167,10 +169,12 @@
 				<li>tel 02-1234-5678 <em>fax 02-1234-9876</em></li>
 			</ul>
 			<p>copyright &copy; 2018 the cube., all rights reserved. </p>
-			<div><a href="../works.html">portfolio</a></div>
+			<div><a href="../works.html"  class="animsition-link" data-animsition-out-class="fade-out-down-sm" data-animsition-out-duration="500">portfolio</a></div>
 		</div>
 	</footer>
+	</div>
 
+	<script src="../scripts/animsition.min.js"></script>
 	<script src="company.js"></script>
 </body>
 </html>
