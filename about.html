@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<title>포트폴리오 about</title>
 	<link rel="stylesheet" href="common/reset.css">
+	<link rel="stylesheet" href="scripts/animsition.min.css">
 	<link rel="stylesheet" href="about.css">
 	<script src="common/prefixfree.min.js"></script>
 	<script src="common/jquery-3.3.1.min.js"></script>
@@ -15,7 +16,7 @@
 <body>
 	<div class="menu">
 		<nav class="menu_top">
-			<h1><a href="index.html">dohyun / kim</a></h1>
+			<h1><a href="index.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="300">dohyun / kim</a></h1>
 		</nav>
 		<nav class="menu_bottom"></nav>
 		<nav class="menu_left">
@@ -25,9 +26,9 @@
 		<nav class="slide">
 			<article>
 			<section>
-				<p><a href="works.html" id="work">works</a></p>
+				<p><a href="works.html" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="800">works</a></p>
 			</section>
-				<p><a href="about.html" id="about">about</a></p>
+				<p><a href="about.html">about</a></p>
 			</article>
 			<img src="images/close.png" alt="close">
 		</nav>
@@ -35,7 +36,7 @@
 	</div>
 
 <!-- ********************내용********************** -->
-	<div class="wrap">
+	<div class="wrap animsition">
 		<div class="content">
 			<header>
 				<p>kim dohyun</p>
@@ -141,6 +142,7 @@
 		</div>
 	</div>
 
+	<script src="scripts/animsition.min.js"></script>
 	<script src="about.js"></script>
 </body>
 </html>

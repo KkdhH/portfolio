@@ -6,13 +6,13 @@ $('.wrap').height(ht);
 
 /***********************메뉴틀*******************/
 $('.menu_left img, .menu_left p').hover(function() {
-	$('.menu > .slide_st').stop().animate({left:0},200,'easeOutBack');
+	$('.menu > .slide_st').stop().animate({left:0},500,'easeOutBack');
 	$('.menu > .menu_left p').css({
 		"transform":"rotate(0deg)",
 		"color":"#000"
 	},300);
 }, function() {
-	$('.menu > .slide_st').stop().animate({left:-130},200,'easeOutBack');
+	$('.menu > .slide_st').stop().animate({left:-130},300,'easeOutBack');
 	$('.menu > .menu_left p').css({
 		"transform":"rotate(-90deg)",
 		"color":"#fff"
@@ -37,6 +37,14 @@ $('.menu > .slide img').click(function() {
 	$('.wrap').stop().animate({'opacity':'1'},400);
 });
 
+$('.menu_top h1 a, .slide a').click(function() {
+	$('.menu > .slide').stop().animate({left:'-50%'}, 600);
+	$('.menu .menu_top').animate({top:-80}, 600);
+	$('.menu .menu_top h1').animate({marginLeft:45}, 600);
+	$('.menu .menu_bottom').animate({bottom:-80}, 600);
+	$('.menu .menu_right').animate({right:-80}, 600);
+});
+
 /*************************************************************/
 $('.wrap').mousemove(function(e) {
 		
@@ -46,3 +54,24 @@ $('.wrap').mousemove(function(e) {
 	$('.s12').css({'left':57+(x/20), 'top':154-(y/20)});
 	$('.s13').css({'left':173-(x/30), 'top':45-(y/30)});
 	});
+
+$(".animsition").animsition({
+    inClass: 'fade-in',
+    inDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: '.wrap', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });

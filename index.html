@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<title>포트폴리오 메인</title>
 	<link rel="stylesheet" href="common/reset.css">
+	<link rel="stylesheet" href="scripts/animsition.min.css">
 	<link rel="stylesheet" href="index.css">
 	<script src="common/prefixfree.min.js"></script>
 	<script src="common/jquery-3.3.1.min.js"></script>
@@ -25,9 +26,9 @@
 		<nav class="slide">
 			<article>
 			<section>
-				<p><a href="works.html" id="work">works</a></p>
+				<p><a href="works.html" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="800">works</a></p>
 			</section>
-			<p><a href="about.html" id="about">about</a></p>
+			<p><a href="about.html" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="800">about</a></p>
 			</article>
 			<img src="images/close.png" alt="close">
 		</nav>
@@ -35,7 +36,7 @@
 	</div>
 
 <!-- ********************내용********************** -->
-	<div class="wrap">
+	<div class="wrap animsition">
 		<section>
 			<img src="images/star_main.png" alt="capricornus">
 		</section>
@@ -45,6 +46,7 @@
 		<img src="images/star4.png" alt="별3" class="s14">
 	</div>
 
+	<script src="scripts/animsition.min.js"></script>
 	<script src="index.js"></script>
 </body>
 </html>

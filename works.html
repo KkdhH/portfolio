@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<title>포트폴리오 서브</title>
 	<link rel="stylesheet" href="common/reset.css">
+	<link rel="stylesheet" href="scripts/animsition.min.css">
 	<link rel="stylesheet" href="works.css">
 	<script src="common/prefixfree.min.js"></script>
 	<script src="common/jquery-3.3.1.min.js"></script>
@@ -14,7 +15,7 @@
 <body>
 	<div class="menu">
 		<nav class="menu_top">
-			<h1><a href="index.html">dohyun / kim</a></h1>
+			<h1><a href="index.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="300">dohyun / kim</a></h1>
 		</nav>
 		<nav class="menu_bottom"></nav>
 		<nav class="menu_left">
@@ -24,21 +25,21 @@
 		<nav class="slide">
 			<article>
 			<section>
-				<p><a href="works.html" id="work">works</a></p>
+				<p><a href="works.html">works</a></p>
 			</section>
-			<p><a href="about.html" id="about">about</a></p>
+			<p><a href="about.html" class="animsition-link" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="800">about</a></p>
 			</article>
 			<img src="images/close.png" alt="close">
 		</nav>
 		<nav class="menu_right"></nav>
 	</div>
 
-	<div class="wrap">
+	<div class="wrap animsition">
 		<div class="list">
 			<section>
 				<h2>01.</h2>
 				<ul>
-					<li><a href="sony/sony_process.html">SONY</a></li>
+					<li><a href="sony/sony_process.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="200">SONY</a></li>
 					<li>web redesign</li>
 				</ul>
 			</section>
@@ -46,7 +47,7 @@
 			<section>
 				<h2>02.</h2>
 				<ul>
-					<li><a href="dr_bronners/bronners_process.html">Dr. bronner's</a></li>
+					<li><a href="dr_bronners/bronners_process.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="200">Dr. bronner's</a></li>
 					<li>brand introduction</li>
 				</ul>
 			</section>
@@ -54,7 +55,7 @@
 			<section>
 				<h2>03.</h2>
 				<ul>
-					<li><a href="DO/DO.html">DO</a></li>
+					<li><a href="DO/DO.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="200">DO</a></li>
 					<li>UI/UX design</li>
 				</ul>
 			</section>
@@ -62,7 +63,7 @@
 			<section>
 				<h2>04.</h2>
 				<ul>
-					<li><a href="company/company_process.html">THE CUBE</a></li>
+					<li><a href="company/company_process.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="200">THE CUBE</a></li>
 					<li>company website</li>
 				</ul>
 			</section>
@@ -70,8 +71,8 @@
 			<section>
 				<h2>05.</h2>
 				<ul>
-					<li><a href="#">Works 5</a></li>
-					<li>wdb design</li>
+					<li><a href="#" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="200">Works 5</a></li>
+					<li>web design</li>
 				</ul>
 			</section>
 		</div>
@@ -84,6 +85,8 @@
 		</div>
 	</div>
 
+
+	<script src="scripts/animsition.min.js"></script>
 	<script src="works.js"></script>
 </body>
 </html>
