@@ -29,9 +29,9 @@ $(window).scroll(function() {
 });
 
 $('.business nav ul a').hover(function() {
-	$(this).stop().siblings('div').children('img').css({'transform':'scale(1.25)', 'opacity':'.9'});
+	$(this).siblings('div').children('img').stop().css({'transform':'scale(1.25)', 'opacity':'.9'});
 }, function() {
-	$(this).stop().siblings('div').children('img').css({'transform':'scale(1)', 'opacity':'1'});
+	$(this).siblings('div').children('img').stop().css({'transform':'scale(1)', 'opacity':'1'});
 });
 
 $('.business nav ul img').hover(function() {

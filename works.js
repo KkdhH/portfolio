@@ -75,3 +75,14 @@ $(".animsition").animsition({
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
   });
+
+/*****************************************************************/
+
+$('.wrap .list li a').mouseenter(function() {
+	$(this).stop().css({"transform":"rotateX(360deg)"});
+	$(this).parents('section').stop().animate({"opacity":"1"}, 500);
+});
+$('.wrap .list li a').mouseleave(function() {
+	$(this).stop().css({"transform":"rotateX(0deg)"});
+	$(this).parents('section').stop().animate({"opacity":".3"}, 250);
+});

@@ -8,11 +8,12 @@
 
 }
 
-@media screen and (max-width:414px) {
-	header { height:450px; width:100%; }
-	header .header_wrap { width:100%; }
-	header .header h1 img { width:120px; left:15px; }
-	header .header .menu { width:100%; display:none; }
+@media screen and (max-width:415px) {
+	header { height:450px; }
+	header .header { height:75px; width:100%; }
+	header .header h1 a { width:90px; }
+	header .header h1 img { width:90px; left:15px; }
+	header .header .menu { display:none; }
 
 	header .main { top:120px; }
 	header .main .main_p { width:100%; padding:15px; }
@@ -47,6 +48,8 @@
 	.works > p { font-size:15px; margin-bottom:30px; }
 	.works nav { width:92%; }
 	.works nav ul { width:100%; float:none; margin:15px auto; }
+
+	.top_button { display:none; }
 
 	footer { width:100%; }
 	footer .footer_top { width:100%; }
