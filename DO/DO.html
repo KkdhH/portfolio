@@ -3,11 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<META http-equiv="X-UA-Compatible" content="IE=Edge">
-	<title>portfolio work 3 - UI/UX DO</title>
+	<title>portfolio - UI/UX DO</title>
 	<link rel="stylesheet" href="../common/reset.css"/>
+	<link rel="stylesheet" href="../scripts/animsition.min.css">
 	<link rel="stylesheet" href="DO.css">
+
+	<script src="../common/prefixfree.min.js"></script>
+	<script src="../common/jquery-3.3.1.min.js"></script>
+	<script src="../common/jquery-ui.min.js"></script>
+
 </head>
-<body>
+<body class="animsition">
 	<div class="wrap">
 		<div class="header">
 			<img src="images/do_mainPhone.png" alt="메인">
@@ -124,8 +130,17 @@
 
 		<div class="marvel">
 			<p><img src="images/marvel_logo.png" alt="marvel"></p>
-			<p><a href="https://marvelapp.com/43fh25d/screen/40474529" target="_blanck">구현보기</a></p>
+			<p><a href="https://marvelapp.com/43fh25d/screen/40474529" class="animsition-link"
+  data-animsition-out-class="fade-out-up-sm"
+  data-animsition-out-duration="1000">구현보기</a></p>
 		</div>
 	</div>
+
+	<footer>
+		<p><a href="../works.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="500">목록으로 돌아가기</a></p>
+	</footer>
+
+	<script src="../scripts/animsition.min.js"></script>
+	<script src="DO.js"></script>
 </body>
 </html>
