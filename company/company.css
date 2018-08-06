@@ -9,31 +9,33 @@ font-family: 'Nanum Gothic', sans-serif;
 
 body { width:100%; font-family: 'Nanum Gothic', sans-serif; }
 
-header { width:100%; height:900px; position:relative; overflow: hidden; }
-header .header { width:100%; position:fixed; top:0; z-index:999; height:120px; transition:.4s; }
+header { width:100%; position:relative; overflow:hidden; }
+header .header { width:100%; position:fixed; top:0; z-index:900; height:105px; transition:.4s; }
 header .header_wrap { width:1200px; margin:0 auto; position:relative; }
-header .header h1 a { width:180px; position:absolute; top:15px; left:0; display:block; }
-header .header h1 img { width:180px; }
-header .header .menu { position:absolute; top:50px; right:0; overflow:hidden; }
+header .header h1 a { position:absolute; top:12px; }
+header .header h1 img { width:160px; }
+header .header p { display:none; }
+header .header .menu { position:absolute; top:60px; right:0; overflow:hidden; }
 header .header .menu li { float:left; padding-left:50px; text-transform:uppercase; }
 header .header .menu li:hover a { color:#77a180; }
 header .header .menu a { font-family: 'Roboto', sans-serif; font-size:20px; color:#343434; letter-spacing:-1px; }
 
-header .header_bg { width:100%; height:900px; }
-header .header_bg li { width:100%; height:100%; float:left; }
-header .header_bg li:nth-child(1) { background:url(images/header_bg1.png); background-size:cover; background-position:center; }
-header .header_bg li:nth-child(2) { background:url(images/header_bg2.png); background-size:100% 100%; background-position:center; }
-header .header_bg li:nth-child(3) { background:url(images/header_bg3.png); background-size:100% 100%; background-position:center; }
+header .header_bg { width:300%; }
+header .header_bg li { width:33.333%; float:left; transition:1s; }
+header #bgSm { display:none; }
 
-header .main { width:100%; position:absolute; top:300px; }
+header .main { width:100%; position:absolute; top:35%; }
 header .main .main_p { width:1200px; margin:0 auto; }
 header .main .main_p h6 { font-family: 'Roboto', sans-serif; text-transform:uppercase; color:#343434; font-size:18px; }
 header .main .main_p h2 { font-size:84px; text-transform:capitalize; margin:40px 0 45px; }
 header .main .main_p p { font-size:20px; color:#343434; line-height:1.4; }
 header .main .main_p a { display:block; width:225px; height:45px; font-size:14px; line-height:45px; color:#f0f0f0; background-color:#353535; text-align:center; margin-top:20px; }
 header .main .main_p a:hover { background-color:#090909; }
+
 header .btnG { width:100%; height:100px; position:absolute; margin:auto; top:0; bottom:0; display:none; }
-header .btnG li { float:left; width:80px; height:100px; background-color:rgba(99, 99, 99, .8); text-align:center; cursor:pointer; }
+header .wrap:hover .btnG { display:block; }
+header .btnG li { float:left; width:80px; height:100px; background-color:rgba(99, 99, 99, .75); text-align:center; cursor:pointer; transition:.3s; }
+header .btnG li:hover { background-color:rgba(99, 99, 99, 1); }
 header .btnG li:last-child { position:absolute; right:0; }
 header .btnG li i { font-size:45px; line-height:100px; color:#f7f7f7; }
 
@@ -55,7 +57,7 @@ header .btnG li i { font-size:45px; line-height:100px; color:#f7f7f7; }
 .business nav ul a:hover i { color:#77a180; margin-left:95px; }
 
 /*------------------------------------------------------------------------*/
-.img { clear:both; width:100%; height:587px; text-align:center; margin:98px 0 150px; background:url(images/img_parallax.png) no-repeat; background-size:cover; background-position:center; background-attachment:fixed; }
+.img { clear:both; width:100%; height:587px; text-align:center; margin:120px 0 150px; background:url(images/img_parallax.png) no-repeat; background-size:cover; background-position:center; background-attachment:fixed; }
 .img p { color:#ffffff; font-size:62px; font-family: 'Roboto', sans-serif;  text-transform:capitalize; font-weight:300; padding-top:240px; }
 
 /*----------------------------------------------------------------------*/
@@ -76,7 +78,7 @@ header .btnG li i { font-size:45px; line-height:100px; color:#f7f7f7; }
 .news p a:hover i { margin-left:125px; }
 
 /*--------------------------------------------------------------------*/
-.works { width:100%; margin-top:100px; padding:165px 0 100px; }
+.works { width:100%;  padding:150px 0 100px; }
 .works > h3 { text-align:center; font-family: 'Roboto', sans-serif; font-size:45px; text-transform:uppercase; letter-spacing:1px; }
 .works > p { text-align:center; color:#353535; font-size:18px; margin-top:15px; }
 .works nav { width:1200px; margin:0 auto; overflow:hidden; transition:.7s ease-in-out; }
@@ -86,11 +88,9 @@ header .btnG li i { font-size:45px; line-height:100px; color:#f7f7f7; }
 .works nav ul div { width:100%; overflow:hidden; }
 .works nav ul div img { width:100%; transition:.4s ease-in-out; }
 .works nav ul div img:hover { transform:scale(1.25); opacity:.9; }
-/*.works nav ul h5 { font-size:18px; color:#525252; padding:32px 32px 20px; }
-.works nav ul p { font-size:; padding:0 32px; }*/
 
 /*---------------------------------------------------------------------*/
-.top_button { width:80px; position:fixed; bottom:40px; right:-240px; text-align:center; transition:.5s; }
+.top_button { width:80px; position:fixed; bottom:40px; right:-240px; text-align:center; transition:.8s; }
 .top_button a { display:block; padding:12px; background-color:#8f9598; font-size:15px; color:#fff; text-transform:uppercase;  }
 .top_button i { font-size:18px; }
 .top_button:hover a { background-color:#77a180; }
@@ -116,3 +116,6 @@ footer .footer_bottom p { clear:both; font-size:12px; color:#a6abad; margin-top:
 footer .footer_bottom div { position:absolute; right:0; margin-top:-45px; }
 footer .footer_bottom div a { display:block; width:215px; height:45px; background-color:#7d8589; border:1px solid #6f777b; box-sizing:border-box; line-height:45px; color:#fff; font-size:14px; text-indent:15px; }
 footer .footer_bottom div a:hover { background-color:#6f777b; }
+
+/***********************************************************/
+div.menuMb { display:none; }

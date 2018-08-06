@@ -1,25 +1,22 @@
+//slide
 $('.left').click(function() {
-	$('.header_bg > li:last').prependTo('.header_bg');
+	$('#bgL > li:last').prependTo('#bgL');
 });
 $('.right').click(function() {
-	$('.header_bg > li:first').appendTo('.header_bg');
+	$('#bgL > li:first').appendTo('#bgL');
 });
 
 setInterval(function() {
-			$('.header_bg > li').first().appendTo('.header_bg');
+			$('#bgL > li').first().appendTo('#bgL');
 		}, 7000);
 
+setInterval(function() {
+            $('#bgSm > li').first().appendTo('#bgSm');
+        }, 7000);
 
-$('.header_bg, .main').mouseenter(function() {
-	$('.btnG').css({'display':'block'});
-});
-$('.header_bg').mouseleave(function() {
-	$('.btnG').css({'display':'none'});
-});
-
-
+//menu scroll
 $(window).scroll(function() {
-	if(150 < $(window).scrollTop() ) {
+	if(120 < $(window).scrollTop() ) {
 		$('.header').css({'background':'#f7fafc', 'border-bottom':'1px solid #242424'});
 		$('.top_button').css({'right':'30px'});
 	} else {
@@ -28,6 +25,17 @@ $(window).scroll(function() {
 	}
 });
 
+//top 버튼 속도
+var top_speed = 1200;
+var top_btn = $('.top_button');
+
+$(top_btn).bind('click', _btnTopAction);
+
+function _btnTopAction() {
+	$('html, body').stop().animate({scrollTop:0}, top_speed, "easeOutQuart");
+}
+
+//이미지 확대
 $('.business nav ul a').hover(function() {
 	$(this).siblings('div').children('img').stop().css({'transform':'scale(1.25)', 'opacity':'.9'});
 }, function() {
@@ -40,8 +48,17 @@ $('.business nav ul img').hover(function() {
 	$(this).stop().css({'transform':'scale(1)', 'opacity':'1'});
 });
 
+//mobile menu
+$('.header p i').click(function() {
+    $('.menuMb').animate({'left':'0'}, 500);
+    $('.animsition').animate({'opacity':'.45'});
+});
+$('.menuMb p i').click(function() {
+    $('.menuMb').animate({'left':'-100%'}, 500);
+    $('.animsition').animate({'opacity':'1'});
+});
 
-
+//로딩
 $(".animsition").animsition({
     inClass: 'fade-in-down-sm',
     inDuration: 1500,
@@ -61,4 +78,4 @@ $(".animsition").animsition({
     overlayClass : 'animsition-overlay-slide',
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
-  });
+});
