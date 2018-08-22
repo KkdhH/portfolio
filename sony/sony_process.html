@@ -3,18 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<META http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>portfolio work 1 - sony 페이지</title>
 	<link rel="stylesheet" href="../common/reset.css"/>
+	<link rel="stylesheet" href="../scripts/animsition.min.css">
 	<link rel="stylesheet" href="sony_process.css">
 
+	<script src="../common/prefixfree.min.js"></script>
 	<script src="../common/jquery-3.3.1.min.js"></script>
 	<script src="../common/jquery-ui.min.js"></script>
-	<script>
-		
-	</script>
 </head>
-<body>
+<body class="animsition">
 	<div class="wrap">
 		<header>
 			<h1><img src="images/sony_logo.png" alt="소니로고"></h1>
@@ -152,13 +150,17 @@
 		</div>
 		
 		<article class="go">
-			<p><a href="sony.html">웹페이지 바로가기</a></p>
+			<p><a href="sony.html" class="animsition-link"
+  data-animsition-out-class="fade-out-up-sm"
+  data-animsition-out-duration="1000">웹페이지 바로가기</a></p>
 		</article>
 	</div>
 
 	<div class="back">
-		<p><a href="../works.html">목록으로 돌아가기</a></p>
+		<p><a href="../works.html" class="animsition-link" data-animsition-out-class="fade-out" data-animsition-out-duration="500">목록으로 돌아가기</a></p>
 	</div>
 
+	<script src="../scripts/animsition.min.js"></script>
+	<script src="sony_process.js"></script>
 </body>
 </html>
