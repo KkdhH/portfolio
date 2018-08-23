@@ -3,8 +3,8 @@
 body {
 	width:100%;
 	font-family:'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
-	background-color:#f9ec00;
 }
+.wrap { background-color:#f9ec00; }
 
 header { background:linear-gradient(#48affe 0%, #75e4a6 50%, #e4eb1b 83.33%, #f9ec00 100%); }
 header .header_wrap { width:100%; margin:0 auto; text-align:center; background:url(images/header_star.png) no-repeat; background-size:1400px; background-position:50% 6%; padding:100px 0 430px 0; }

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/*
+font-family: 'Malgun Gothic', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+.wrap { width:1200px; margin:5px auto 0; border:1px solid #939393; font-family:'Nanum Gothic', sans-serif; color:#1e1e1e; }
+
+header { text-align:center; text-transform:uppercase; padding-top:80px; background-color:#f1f5f9; }
+header h1 img { width:280px; }
+header > p { font-size:26px; margin:10px 0 50px; font-weight:700; }
+
+header .info { background-color:#0073c1; color:#fff; overflow:hidden; padding:25px 88px; }
+header .info ul { float:left; color:#eeeeee; font-weight:700; font-size:17px; text-align:left; margin-right:94px; }
+header .info ul:nth-of-type(4) { margin-right:0; }
+header .info ul li:nth-of-type(2), header .info ul li:nth-of-type(3) { font-size:15px; font-weight:normal; text-indent:7px; line-height:1.4; }
+header .info ul li:nth-of-type(2) { margin-top:10px; }
+
+header .web { background-color:#fff; padding:45px 0 55px; }
+header .web h2 { font-size:44px; font-weight:700; margin-bottom:18px; }
+header .web p:last-child { font-size:18px; color:#939393; margin-top:45px; line-height:1.5; text-transform:none; }
+
+/**********************************************************************/
+.wrap div { padding:35px 0 50px 88px; text-transform:uppercase; }
+.wrap div h3 { font-size:35px; font-weight:700; margin:10px 0 35px; }
+.story, .fonts, .publishing { background-color:#f1f5f9; }
+
+/**********************************************************************/
+.story article h4 { font-size:20px; font-weight:700; margin-bottom:15px; margin-left:115px; }
+.story article h4:nth-of-type(2) { margin-top:28px; }
+.story article p { font-size:16px; color:#939393; margin-left:155px; line-height:1.5; }
+
+/**********************************************************************/
+.colors article { overflow:hidden; padding:0 100px; margin:0 65px; }
+.colors article > ul { float:left; width:180px; margin:0 80px; }
+.colors article .box { width:180px; height:60px; border:1px solid #a8a8a8; box-sizing:border-box; text-indent:-9999px; }
+.colors article ul:nth-child(1) .box { background-color:#f9ec00; }
+.colors article ul:nth-child(2) .box { background-color:#48affe; }
+.colors article > ul li ul { text-align:right; line-height:1.3; color:#939393; font-size:14px; }
+.colors article .color_code { font-size:18px; font-weight:700; color:#1e1e1e; margin:12px 0 5px; }
+
+/*********************************************************************/
+.fonts { overflow:hidden; }
+.fonts article { float:left; overflow:hidden; margin:0 30px; font-family: 'Malgun Gothic', sans-serif; }
+.fonts article h5 { font-size:25px; border-bottom:1px solid #1e1e1e; padding-bottom:15px; margin-bottom:15px; text-transform:none; font-family: 'Nanum Gothic', sans-serif; }
+.fonts article span { font-size:16px; margin-left:15px; font-family: 'Malgun Gothic', sans-serif; }
+.fonts article section { font-size:54px; font-weight:800; float:left; text-transform:none; }
+.fonts article section p { font-size:15px; font-weight:normal; color:#939393; line-height:1.3; margin-left:20px; }
+.fonts article section .bold { font-weight:700; margin-top:10px; }
+.fonts article:nth-of-type(3) { text-transform:none; margin-top:50px; font-size:14px; font-family: 'Nanum Gothic', sans-serif; }
+.fonts article:nth-of-type(3) p { color:#939393; line-height:3.3; }
+.fonts article:nth-of-type(3) p:last-child { font-weight:700; }
+.fonts article:nth-of-type(3) p img { margin-right:20px; }
+
+/********************************************************************/
+.design article p { font-size:16px; color:#939393; margin-left:140px; line-height:1.5; }
+
+/********************************************************************/
+.publishing article h4 { font-size:20px; font-weight:700; margin-bottom:15px; margin-left:115px; }
+.publishing article h4:nth-of-type(2) { margin-top:28px; }
+.publishing article p { font-size:16px; color:#939393; margin-left:155px; line-height:1.5; text-transform:none; margin-bottom:10px; }
+
+/********************************************************************/
+.go { padding:50px 0; }
+.go a { margin:0 auto; display:block; width:220px; height:60px; border:1px solid #0073c1; color:#0073c1; text-align:center; line-height:55px; box-sizing:border-box; font-size:21px; transition:.2s; }
+.go a:hover { background-color:#0073c1; color:#efefef; }
+
+/*****************************************************************/
+.back { width:1200px; margin:60px auto; }
+.back p { width:220px; height:60px; text-align:center; margin:0 auto; }
+.back a { font-size:18px; color:#939393; transition:.14s; }
+.back a:hover { color:#000; }
