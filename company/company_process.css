@@ -13,9 +13,9 @@ header { text-align:center; text-transform:uppercase; padding-top:80px; backgrou
 header h1 img { width:280px; }
 header > p { font-size:26px; margin:10px 0 50px; font-weight:700; }
 
-header .info { background-color:#0073c1; color:#fff; overflow:hidden; padding:25px 88px; }
-header .info ul { float:left; color:#eeeeee; font-weight:700; font-size:17px; text-align:left; margin-right:94px; }
-header .info ul:nth-of-type(4) { margin-right:0; }
+header .info { background-color:#0073c1; color:#fff; overflow:hidden; padding:25px 180.5px; }
+header .info ul { float:left; color:#eeeeee; font-weight:700; font-size:17px; text-align:left; margin:0 50px; }
+/*header .info ul:nth-of-type(3) { margin-right:0; }*/
 header .info ul li:nth-of-type(2), header .info ul li:nth-of-type(3) { font-size:15px; font-weight:normal; text-indent:7px; line-height:1.4; }
 header .info ul li:nth-of-type(2) { margin-top:10px; }
 
